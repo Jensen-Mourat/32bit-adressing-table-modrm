@@ -1,3 +1,3 @@
-import {Table} from './src/table';
+import { _Table } from './src/table';
 
-export default Table;
+export const Table = new _Table();

@@ -222,4 +222,3 @@ export class _Table {
   }
 }
 
-export const Table = new _Table();
