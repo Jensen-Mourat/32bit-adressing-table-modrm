@@ -221,4 +221,3 @@ export class _Table {
     return setName;
   }
 }
-
