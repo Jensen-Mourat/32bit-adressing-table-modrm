@@ -1,7 +1,7 @@
 export class _Table {
   private set1 = new Set(['al', 'ax', 'eax', '0']);
   private set2 = new Set(['cl', 'cx', 'ecx', '1']);
-  private set3 = new Set(['di', 'dx', 'edx', '2']);
+  private set3 = new Set(['dl', 'dx', 'edx', '2']);
   private set4 = new Set(['bl', 'bx', 'ebx', '3']);
   private set5 = new Set(['ah', 'sp', 'esp', '4']);
   private set6 = new Set(['ch', 'bp', 'ebp', '5']);
@@ -179,7 +179,7 @@ export class _Table {
         .set('set7', '3F'),
     );
 
-  reversedTable = new Map<string, [string, string]>();
+  private reversedTable = new Map<string, [string, string]>();
 
   constructor() {
     this.table.forEach((value, key) => {
