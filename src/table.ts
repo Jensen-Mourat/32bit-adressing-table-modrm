@@ -1,4 +1,4 @@
-export class _Table {
+export class Table {
   private set1 = new Set(['al', 'ax', 'eax', '0']);
   private set2 = new Set(['cl', 'cx', 'ecx', '1']);
   private set3 = new Set(['dl', 'dx', 'edx', '2']);
@@ -14,169 +14,161 @@ export class _Table {
       'set1', //row 1
       new Map()
         .set('set1', 'C0')
-        .set('set2', 'C8')
-        .set('set3', 'D0')
-        .set('set3', 'D8')
-        .set('set4', 'E0')
-        .set('set5', 'E8')
-        .set('set6', 'F0')
-        .set('set7', 'F8'),
+        .set('set2', 'C1')
+        .set('set3', 'C2')
+        .set('set4', 'C3')
+        .set('set5', 'C4')
+        .set('set6', 'C5')
+        .set('set7', 'C6')
+        .set('set8', 'C7')
+        .set('[eax]', '00')
+        .set('[ecx]', '01')
+        .set('[edx]', '02')
+        .set('[ebx]', '03')
+        .set('[sib]', '04')
+        .set('disp32', '05')
+        .set('[esi]', '06')
+        .set('[edi]', '07'),
     )
     .set(
       'set2', //row 2
       new Map()
-        .set('set1', 'C1')
+        .set('set1', 'C8')
         .set('set2', 'C9')
-        .set('set3', 'D1')
-        .set('set3', 'D9')
-        .set('set4', 'E1')
-        .set('set5', 'E9')
-        .set('set6', 'F1')
-        .set('set7', 'F9'),
+        .set('set3', 'CA')
+        .set('set4', 'CB')
+        .set('set5', 'CC')
+        .set('set6', 'CD')
+        .set('set7', 'CE')
+        .set('set8', 'CF')
+        .set('[eax]', '08')
+        .set('[ecx]', '09')
+        .set('[edx]', '0A')
+        .set('[ebx]', '0B')
+        .set('[sib]', '0C')
+        .set('disp32', '0D')
+        .set('[esi]', '0E')
+        .set('[edi]', '0F'),
     )
     .set(
       'set3', //row 3
       new Map()
-        .set('set1', 'C2')
-        .set('set2', 'CA')
+        .set('set1', 'D0')
+        .set('set2', 'D1')
         .set('set3', 'D2')
-        .set('set3', 'DA')
-        .set('set4', 'E2')
-        .set('set5', 'EA')
-        .set('set6', 'F2')
-        .set('set7', 'FA'),
+        .set('set4', 'D3')
+        .set('set5', 'D4')
+        .set('set6', 'D5')
+        .set('set7', 'D6')
+        .set('set8', 'D7')
+        .set('[eax]', '10')
+        .set('[ecx]', '11')
+        .set('[edx]', '12')
+        .set('[ebx]', '13')
+        .set('[sib]', '14')
+        .set('disp32', '15')
+        .set('[esi]', '16')
+        .set('[edi]', '17'),
     )
     .set(
       'set4', //row 4
       new Map()
-        .set('set1', 'C3')
-        .set('set2', 'CB')
-        .set('set3', 'D3')
-        .set('set3', 'DB')
-        .set('set4', 'E3')
-        .set('set5', 'EB')
-        .set('set6', 'F3')
-        .set('set7', 'FB'),
+        .set('set1', 'D8')
+        .set('set2', 'D9')
+        .set('set3', 'DA')
+        .set('set4', 'DB')
+        .set('set5', 'DC')
+        .set('set6', 'DD')
+        .set('set7', 'DE')
+        .set('set8', 'DF')
+        .set('[eax]', '18')
+        .set('[ecx]', '19')
+        .set('[edx]', '1A')
+        .set('[ebx]', '1B')
+        .set('[sib]', '1C')
+        .set('disp32', '1D')
+        .set('[esi]', '1E')
+        .set('[edi]', '1F'),
     )
     .set(
       'set5', //row 5
       new Map()
-        .set('set1', 'C4')
-        .set('set2', 'CC')
-        .set('set3', 'D4')
-        .set('set3', 'DC')
+        .set('set1', 'E0')
+        .set('set2', 'E1')
+        .set('set3', 'E2')
+        .set('set3', 'E3')
         .set('set4', 'E4')
-        .set('set5', 'EC')
-        .set('set6', 'F4')
-        .set('set7', 'FC'),
+        .set('set5', 'E5')
+        .set('set6', 'E6')
+        .set('set7', 'E7')
+        .set('[eax]', '20')
+        .set('[ecx]', '21')
+        .set('[edx]', '22')
+        .set('[ebx]', '23')
+        .set('[sib]', '24')
+        .set('disp32', '25')
+        .set('[esi]', '26')
+        .set('[edi]', '27'),
     )
     .set(
       'set6', //row 6
       new Map()
-        .set('set1', 'C5')
-        .set('set2', 'CD')
-        .set('set3', 'D5')
-        .set('set3', 'DD')
-        .set('set4', 'E5')
-        .set('set5', 'ED')
-        .set('set6', 'F5')
-        .set('set7', 'FD'),
+        .set('set1', 'E8')
+        .set('set2', 'E9')
+        .set('set3', 'EA')
+        .set('set4', 'EB')
+        .set('set5', 'EC')
+        .set('set6', 'ED')
+        .set('set7', 'EE')
+        .set('set8', 'EF')
+        .set('[eax]', '28')
+        .set('[ecx]', '29')
+        .set('[edx]', '2A')
+        .set('[ebx]', '2B')
+        .set('[sib]', '2C')
+        .set('disp32', '2D')
+        .set('[esi]', '2E')
+        .set('[edi]', '2F'),
     )
     .set(
       'set7', //row 7
       new Map()
-        .set('set1', 'C6')
-        .set('set2', 'CE')
-        .set('set3', 'D6')
-        .set('set3', 'DE')
-        .set('set4', 'E6')
-        .set('set5', 'EE')
-        .set('set6', 'F6')
-        .set('set7', 'FE'),
+        .set('set1', 'F0')
+        .set('set2', 'F1')
+        .set('set3', 'F2')
+        .set('set4', 'F3')
+        .set('set5', 'F4')
+        .set('set6', 'F5')
+        .set('set7', 'F6')
+        .set('set8', 'F7')
+        .set('[eax]', '30')
+        .set('[ecx]', '31')
+        .set('[edx]', '32')
+        .set('[ebx]', '33')
+        .set('[sib]', '34')
+        .set('disp32', '35')
+        .set('[esi]', '36')
+        .set('[edi]', '37'),
     )
     .set(
       'set8', //row 8
       new Map()
-        .set('set1', 'C7')
-        .set('set2', 'CF')
-        .set('set3', 'D7')
-        .set('set3', 'DF')
-        .set('set4', 'E7')
-        .set('set5', 'EF')
-        .set('set6', 'F7')
-        .set('set7', 'FF'),
-    )
-    .set(
-      '[eax]', //row 9
-      new Map()
-        .set('set1', '00')
-        .set('set2', '08')
-        .set('set3', '10')
-        .set('set3', '18')
-        .set('set4', '20')
-        .set('set5', '28')
-        .set('set6', '30')
-        .set('set7', '38'),
-    )
-    .set(
-      '[ecx]', //row 10
-      new Map()
-        .set('set1', '01')
-        .set('set2', '09')
-        .set('set3', '11')
-        .set('set3', '19')
-        .set('set4', '21')
-        .set('set5', '29')
-        .set('set6', '31')
-        .set('set7', '39'),
-    )
-    .set(
-      '[edx]', //row 11
-      new Map()
-        .set('set1', '02')
-        .set('set2', '0A')
-        .set('set3', '12')
-        .set('set3', '1A')
-        .set('set4', '22')
-        .set('set5', '2A')
-        .set('set6', '32')
-        .set('set7', '3A'),
-    )
-    .set(
-      '[ebx]', //row 11
-      new Map()
-        .set('set1', '03')
-        .set('set2', '0B')
-        .set('set3', '13')
-        .set('set3', '1B')
-        .set('set4', '23')
-        .set('set5', '2B')
-        .set('set6', '33')
-        .set('set7', '3B'),
-    )
-    .set(
-      '[esi]', //row 11
-      new Map()
-        .set('set1', '06')
-        .set('set2', '0E')
-        .set('set3', '16')
-        .set('set3', '1E')
-        .set('set4', '26')
-        .set('set5', '2E')
-        .set('set6', '36')
-        .set('set7', '3E'),
-    )
-    .set(
-      '[edi]', //row 11
-      new Map()
-        .set('set1', '07')
-        .set('set2', '0F')
-        .set('set3', '17')
-        .set('set3', '1F')
-        .set('set4', '27')
-        .set('set5', '2F')
-        .set('set6', '37')
-        .set('set7', '3F'),
+        .set('set1', 'F8')
+        .set('set2', 'F9')
+        .set('set3', 'FA')
+        .set('set4', 'FB')
+        .set('set5', 'FC')
+        .set('set6', 'FD')
+        .set('set7', 'FE')
+        .set('set8', 'FF')
+        .set('[eax]', '38')
+        .set('[ecx]', '39')
+        .set('[edx]', '3A')
+        .set('[ebx]', '3B')
+        .set('[sib]', '3C')
+        .set('disp32', '3D')
+        .set('[esi]', '3E')
+        .set('[edi]', '3F'),
     );
 
   private reversedTable = new Map<string, [string, string]>();
@@ -192,23 +184,23 @@ export class _Table {
   getReverseValueFromTable(op: string): [string[], string[]] {
     const sets = this.reversedTable.get(op);
     // @ts-ignore
-    return [this[sets[0]] ? Array.from(this[sets[0]]) : [sets[0]], Array.from(this[sets[0]])];
+    const firstSet = this[sets[0]];
+    // @ts-ignore
+    const secondSet = this[sets[1]];
+    // @ts-ignore
+    return [Array.from(firstSet), !!secondSet ? Array.from(secondSet) : [sets[1]]];
   }
 
   getValueFromTable(op1: string, op2: string): string | undefined {
     const setNameForOp1 = this.presentInSet(op1);
     const setNameForOp2 = this.presentInSet(op2);
-    if (!setNameForOp2) {
-      // no collumn matching
-      return undefined;
-    }
-    if (setNameForOp1) {
+    if (setNameForOp1 && setNameForOp2) {
       return this.table.get(setNameForOp1)?.get(setNameForOp2);
     }
-    if (!setNameForOp1) {
-      // can be [edi], [eax] ....
-      return this.table.get(op1)?.get(setNameForOp2);
+    if (setNameForOp1 && !setNameForOp2) {
+      return this.table.get(setNameForOp1)?.get(op2);
     }
+    return undefined;
   }
 
   private presentInSet(op: string): string | undefined {
