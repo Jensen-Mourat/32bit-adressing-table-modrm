@@ -38,7 +38,7 @@ export class Table {
   }
 
   getReverseValueFromTable(op: string, type?: tableType): [string[], string[]] {
-    const table = type ? this.getTable(type, true) as Map<string, [string, string]> : this.reversed32rmTable;
+    const table = type ? (this.getTable(type, true) as Map<string, [string, string]>) : this.reversed32rmTable;
     const sets = table.get(op);
     // @ts-ignore
     const firstSet = this[sets[0]];
@@ -60,7 +60,7 @@ export class Table {
   }
 
   getValueFromTable(op1: string, op2: string, type?: tableType): string | undefined {
-    const table = type ? this.getTable(type) as Map<string, Map<string, string>> : this.table32rm;
+    const table = type ? (this.getTable(type) as Map<string, Map<string, string>>) : this.table32rm;
     let setNameForOp1 = this.presentInSet(op1);
     let setNameForOp2 = this.presentInSet(op2);
     //check modrm byte
@@ -95,4 +95,4 @@ export class Table {
   }
 }
 
-type tableType = '32rm' | '32sib' | '16rm'
+type tableType = '32rm' | '32sib' | '16rm';
