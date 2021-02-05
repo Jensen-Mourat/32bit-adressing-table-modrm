@@ -1,6 +1,6 @@
 {
   "name": "32bit-adressing-table-modrm",
-  "version": "1.0.51",
+  "version": "1.0.6",
   "description": "Intel- 32-Bit Addressing Forms with the ModR/M Byte converted to an easily searchable Hashmap, also includes a reverse search.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
