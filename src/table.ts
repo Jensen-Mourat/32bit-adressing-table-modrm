@@ -63,6 +63,10 @@ export class Table {
     const table = type ? (this.getTable(type) as Map<string, Map<string, string>>) : this.table32rm;
     let setNameForOp1 = this.presentInSet(op1);
     let setNameForOp2 = this.presentInSet(op2);
+    if (type === '32sib') {
+      op1 = op1.includes('[*]') ? op1 : op1.replace('[', '').replace(']', '');
+      return table.get(op1)!.get(op2);
+    }
     //check modrm byte
     if (op1.length === 1) {
       return table.get(setNameForOp1!)?.get(setNameForOp2 ? setNameForOp2 : op2);
