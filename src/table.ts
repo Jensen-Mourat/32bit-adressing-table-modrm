@@ -65,6 +65,7 @@ export class Table {
     let setNameForOp2 = this.presentInSet(op2);
     if (type === '32sib') {
       op1 = op1.includes('[*]') ? op1 : op1.replace('[', '').replace(']', '');
+      op2 = op2.includes('*1') ? op2.replace('*1', '') : op2;
       return table.get(op1)!.get(op2);
     }
     //check modrm byte
