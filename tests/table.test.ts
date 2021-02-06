@@ -28,6 +28,8 @@ class tableTest {
     val!.should.equal('03');
     val = Table.getValueFromTable('eax', '[ecx]');
     val!.should.equal('01');
+    val = Table.getValueFromTable('eax', 'disp32');
+    val!.should.equal('05');
   }
 
   @test 'test reverse search'() {

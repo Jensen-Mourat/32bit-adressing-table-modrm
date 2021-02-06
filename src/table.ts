@@ -68,7 +68,7 @@ export class Table {
       return table.get(setNameForOp1!)?.get(setNameForOp2 ? setNameForOp2 : op2);
     }
     //check memory addressing
-    if (op2.includes('[')) {
+    if (op2.includes('[') || op2.includes('disp')) {
       const temp = op1;
       op1 = op2;
       op2 = temp;
