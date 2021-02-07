@@ -61,8 +61,8 @@ export class Table {
 
   getValueFromTable(op1: string, op2: string, type?: tableType): string | undefined {
     const table = type ? (this.getTable(type) as Map<string, Map<string, string>>) : this.table32rm;
-    let setNameForOp1 = this.presentInSet(op1);
-    let setNameForOp2 = this.presentInSet(op2);
+    const setNameForOp1 = this.presentInSet(op1);
+    const setNameForOp2 = this.presentInSet(op2);
     if (type === '32sib') {
       op1 = op1.includes('[*]') ? op1 : op1.replace('[', '').replace(']', '');
       op2 = op2.includes('*1') ? op2.replace('*1', '') : op2;
