@@ -39,6 +39,11 @@ class tableTest {
     val!.should.equal('1A');
   }
 
+  @test 'test 16 table' () {
+    let val = Table.getValueFromTable('ax', '[bx]', '16rm');
+    val!.should.equal('07');
+  }
+
   @test 'test reverse search'() {
     const val = Table.getReverseValueFromTable('C8');
     val.should.be.deep.equal([['cl', 'cx', 'ecx', '1'], ['al', 'ax', 'eax', '0']]);

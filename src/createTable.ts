@@ -175,7 +175,7 @@ export const create16bitRmTable = () => {
       '[si]',
       '[di]',
       'disp16',
-      ' [bx]',
+      '[bx]',
       '[bx+si]+disp8',
       '[bx+di]+disp8',
       '[bp+si]+disp8',

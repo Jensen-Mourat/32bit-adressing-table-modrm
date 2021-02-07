@@ -68,25 +68,22 @@ export class Table {
       op2 = op2.includes('*1') ? op2.replace('*1', '') : op2;
       return table.get(op1)!.get(op2);
     }
-    //check modrm byte
+    //check rm byte
     if (op1.length === 1) {
       return table.get(setNameForOp1!)?.get(setNameForOp2 ? setNameForOp2 : op2);
     }
-    //check memory addressing
-    if (op2.includes('[') || op2.includes('disp')) {
-      const temp = op1;
-      op1 = op2;
-      op2 = temp;
-      setNameForOp1 = this.presentInSet(op1);
-      setNameForOp2 = this.presentInSet(op2);
-    }
-    if (setNameForOp2 && setNameForOp1) {
+    //both are sets
+    if (setNameForOp1 && setNameForOp2) {
       return table.get(setNameForOp2)?.get(setNameForOp1);
     }
-    if (setNameForOp2 && !setNameForOp1) {
+    //only one is in a set
+    if (setNameForOp1) {
+      return table.get(setNameForOp1)?.get(op2);
+    }
+    if (setNameForOp2) {
       return table.get(setNameForOp2)?.get(op1);
     }
-    return undefined;
+    throw new Error('Could not find value');
   }
 
   private presentInSet(op: string): string | undefined {
