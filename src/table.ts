@@ -41,9 +41,9 @@ export class Table {
     const table = type ? (this.getTable(type, true) as Map<string, [string, string]>) : this.reversed32rmTable;
     const sets = table.get(op);
     // @ts-ignore
-    const firstSet = this[sets[0]];
+    const secondSet = this[sets[0]];
     // @ts-ignore
-    const secondSet = this[sets[1]];
+    const firstSet = this[sets[1]];
     // @ts-ignore
     return [Array.from(firstSet), !!secondSet ? Array.from(secondSet) : [sets[1]]];
   }
