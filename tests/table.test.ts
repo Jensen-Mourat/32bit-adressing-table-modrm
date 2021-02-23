@@ -47,8 +47,10 @@ class tableTest {
   @test 'test reverse search'() {
     let val = Table.getReverseValueFromTable('C8');
     val.should.be.deep.equal([['al', 'ax', 'eax', '0'], ['cl', 'cx', 'ecx', '1']]);
-     val = Table.getReverseValueFromTable('05');
-    val.should.be.deep.equal([ ['disp32'], [ 'al', 'ax', 'eax', '0' ]])
+    val = Table.getReverseValueFromTable('05');
+    val.should.be.deep.equal([['disp32'], ['al', 'ax', 'eax', '0']]);
+    val = Table.getReverseValueFromTable('05', '32sib');
+    val.should.be.deep.equal([['[eax]'], ['[*]']]);
   }
 
 }
