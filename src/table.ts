@@ -45,7 +45,7 @@ export class Table {
     // @ts-ignore
     const firstSet = this[sets[1]];
     // @ts-ignore
-    return [firstSet ? Array.from(firstSet) : sets[1], !!secondSet ? Array.from(secondSet) : [sets[1]]];
+    return [firstSet ? Array.from(firstSet) : [sets[1]], !!secondSet ? Array.from(secondSet) : [sets[1]]];
   }
 
   private getTable(type: tableType, reversed?: boolean) {
